@@ -1,0 +1,2 @@
+Admin;Admin;7de7ab1f35fa85381091ce299b1a95b0;2abcbe139ff71a251c57cd5b78471a63;False;True;Admin
+Supervisor;Supervisor;f508e017b72236451cc987a3c0568e09;931ff7aab3a0937a10b01d34c5303e03;False;True;Supervisor

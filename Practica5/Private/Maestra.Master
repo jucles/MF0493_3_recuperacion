@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Maestra.master.cs" Inherits="Practica5.Private.Maestra" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="../Content/bootstrap.css" rel="stylesheet" />
+    <link href="../Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-2.1.0.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <style>
+        footer h1 {
+            font-size: 0.7em;
+            text-align: center;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body style="margin:75px 20px 0px 20px">
+     <form runat="server">
+     <header>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">                        
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/">Gestor de empresas</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>                            
+                            <a runat="server" href="~/About">Acerca de</a>
+                        </li>
+                        <li>
+                            <asp:LoginView ID="LoginView1" runat="server">
+                                <AnonymousTemplate>
+                                    <a href="#"><span class="text-warning">Anonimo</span></a>
+                                </AnonymousTemplate>
+                                <LoggedInTemplate>
+                                    <a href="~/Private/Default.aspx" runat="server"><span class="text-muted"><asp:LoginName ID="LoginName1" runat="server" /></span></a>
+                                </LoggedInTemplate>
+                            </asp:LoginView>
+                            
+                        </li>
+                        <li>
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       
+    </header>
+    <section class="row">
+        <nav class="col-md-3">
+            <asp:ContentPlaceHolder ID="zona2" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </nav>
+        <section class="col-md-9">
+            <asp:ContentPlaceHolder ID="zona1" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </section>
+    </section>
+    <footer>
+        <hr />
+        <h1>&copy;2014 Laurica</h1>
+    </footer>
+    </form>
+</body>
+</html>
+
